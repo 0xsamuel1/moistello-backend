@@ -33,8 +33,9 @@ issues:
       linters:
         - forbidigo
     # errcheck is rolled out package by package; cmd/indexer, cmd/migrate,
-    # internal/domain/circle, pkg/stellar, and webhook are clean and must stay
-    # that way. Extend this pattern as other packages are fixed.
-    - path-except: ^(cmd/indexer/|cmd/migrate/|internal/domain/circle/|pkg/stellar/|webhook/)
+    # internal/domain/circle, internal/domain/yellowcard, internal/api/handler,
+    # internal/api/middleware, internal/websocket, pkg/stellar, and webhook are
+    # clean and must stay that way. Extend this pattern as other packages are fixed.
+    - path-except: ^(cmd/indexer/|cmd/migrate/|internal/domain/circle/|internal/domain/yellowcard/|internal/api/handler/|internal/api/middleware/|internal/websocket/|pkg/stellar/|webhook/)
       linters:
         - errcheck
